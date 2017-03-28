@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html ng-app="searchApp">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body ng-controller="searchController as searchCtrl" >
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="jumbotron bannerBackImage"><h2 class="bannerStyle">Welcome to NFL 2016</h2></div>
+
+    </div>
+    <div class="row">
+
+        <div class="col-sm-4">
+            <div class="displayInline">
+                <h3>Search:  </h3><input type="text" ng-model="searchCtrl.searchTxt">
+
+            </div>
+
+
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>
+                        Sno:
+                    </th>
+                    <th>
+                        Names
+                    </th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <tr ng-repeat="player in searchCtrl.playerList | filter:searchCtrl.searchTxt | orderBy:'displayName'   ">
+                    <td ng-bind="$index+1">
+                    </td>
+                    <td ng-bind="player.displayName">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-sm-4">
+            <h3>Game History</h3>
+            The history of the National Football League dates to 1920, when the league was founded as the American
+            Professional Football Association with ten teams from four states, all of whom existed in some form as
+            participants of regional leagues in their respective territories; it took on its current name in 1922. The
+            NFL was the first professional football league to successfully establish a nationwide presence, after
+            several decades of failed attempts. Only two teams currently in the NFL, the Decatur Staleys (now the
+            Chicago Bears) and the Chicago Cardinals (now the Arizona Cardinals), are founding members.[1] The Green Bay
+            Packers, founded 1919 (joined the NFL in 1921), is the oldest NFL franchise in continuous operation with the
+            same name in the same location.[2]
+
+            League membership gradually stabilized throughout the 1920s and 1930s as the league adopted progressively
+            more formal organization. The first official championship game was held in 1933. The NFL stopped signing
+            black players in 1927 but reintegrated in 1946 following World War II. Other changes followed after the war;
+            the office of league President evolved into the more powerful Commissioner post, mirroring a similar move in
+            Major League Baseball. Teams became more financially viable, the last team folding in 1952 and the league
+            absorbing teams from the briefly more successful All-America Football Conference in 1950, two of which
+            survive to the present day. By 1958, when that season's NFL championship game became known as "The Greatest
+            Game Ever Played", the NFL was on its way to becoming one of the most popular sports leagues in the United
+            States.
+
+            The rival American Football League was founded in 1960. It was very successful, and forced a merger with the
+            older NFL that resulted in a greatly expanded league and the creation of the Super Bowl, which has become
+            the most-watched annual sporting event in the United States. The league continued to expand to its current
+            size of 32 teams. A series of labor agreements during the 1990s and increasingly large television contracts
+            has helped keep the league one of the most profitable in the U.S., and the only major league in the U.S.
+            since 1990 to avoid a work stoppage that resulted in the loss of regular-season games.
+
+            On August 20, 1920, a meeting was held by representatives of the Akron Pros, Canton Bulldogs, Cleveland
+            Indians, and Dayton Triangles at the Jordan and Hupmobile auto showroom in Canton, Ohio. This meeting
+            resulted in the formation of the American Professional Football Conference (APFC), a group who, according to
+            the Canton Evening Repository, intended to "raise the standard of professional football in every way
+            possible, to eliminate bidding for players between rival clubs and to secure cooperation in the formation of
+            schedules".[7] Another meeting held on September 17, 1920 resulted in the renaming of the league to the
+            American Professional Football Association (APFA).[7] The league hired Jim Thorpe as its first president,
+            and consisted of 14 teams. Only two of these teams, the Decatur Staleys (now the Chicago Bears) and the
+            Chicago Cardinals (now the Arizona Cardinals), remain.[8]
+
+
+            The Akron Pros won the first APFA (NFL) Championship.
+            Although the league did not maintain official standings for its 1920 inaugural season and teams played
+            schedules that included non-league opponents, the APFA awarded the Akron Pros the championship by virtue of
+            their 8–0–3 (8 wins, 0 losses, and 3 ties) record.[9] The following season resulted in the Chicago Staleys
+            controversially winning the title over the Buffalo All-Americans.[10] In 1922, the APFA changed its name to
+            the National Football League (NFL).[11]
+
+            In 1932, the season ended with the Chicago Bears (6-1-6) and the Portsmouth Spartans (6-1-4) tied for first
+            in the league standings.[12] At the time, teams were ranked on a single table and the team with the highest
+            winning percentage (not including ties, which were not counted towards the standings) at the end of the
+            season was declared the champion; the only tiebreaker was that in the event of a tie, if two teams played
+            twice in a season, the result of the second game determined the title (the source of the 1921 controversy).
+
+        </div>
+        <div class="col-sm-4">
+            <h3>History</h3>
+            The history of the National Football League dates to 1920, when the league was founded as the American
+            Professional Football Association with ten teams from four states, all of whom existed in some form as
+            participants of regional leagues in their respective territories; it took on its current name in 1922. The
+            NFL was the first professional football league to successfully establish a nationwide presence, after
+            several decades of failed attempts. Only two teams currently in the NFL, the Decatur Staleys (now the
+            Chicago Bears) and the Chicago Cardinals (now the Arizona Cardinals), are founding members.[1] The Green Bay
+            Packers, founded 1919 (joined the NFL in 1921), is the oldest NFL franchise in continuous operation with the
+            same name in the same location.[2]
+
+            League membership gradually stabilized throughout the 1920s and 1930s as the league adopted progressively
+            more formal organization. The first official championship game was held in 1933. The NFL stopped signing
+            black players in 1927 but reintegrated in 1946 following World War II. Other changes followed after the war;
+            the office of league President evolved into the more powerful Commissioner post, mirroring a similar move in
+            Major League Baseball. Teams became more financially viable, the last team folding in 1952 and the league
+            absorbing teams from the briefly more successful All-America Football Conference in 1950, two of which
+            survive to the present day. By 1958, when that season's NFL championship game became known as "The Greatest
+            Game Ever Played", the NFL was on its way to becoming one of the most popular sports leagues in the United
+            States.
+
+            The rival American Football League was founded in 1960. It was very successful, and forced a merger with the
+            older NFL that resulted in a greatly expanded league and the creation of the Super Bowl, which has become
+            the most-watched annual sporting event in the United States. The league continued to expand to its current
+            size of 32 teams. A series of labor agreements during the 1990s and increasingly large television contracts
+            has helped keep the league one of the most profitable in the U.S., and the only major league in the U.S.
+            since 1990 to avoid a work stoppage that resulted in the loss of regular-season games.
+
+            On August 20, 1920, a meeting was held by representatives of the Akron Pros, Canton Bulldogs, Cleveland
+            Indians, and Dayton Triangles at the Jordan and Hupmobile auto showroom in Canton, Ohio. This meeting
+            resulted in the formation of the American Professional Football Conference (APFC), a group who, according to
+            the Canton Evening Repository, intended to "raise the standard of professional football in every way
+            possible, to eliminate bidding for players between rival clubs and to secure cooperation in the formation of
+            schedules".[7] Another meeting held on September 17, 1920 resulted in the renaming of the league to the
+            American Professional Football Association (APFA).[7] The league hired Jim Thorpe as its first president,
+            and consisted of 14 teams. Only two of these teams, the Decatur Staleys (now the Chicago Bears) and the
+            Chicago Cardinals (now the Arizona Cardinals), remain.[8]
+
+
+            The Akron Pros won the first APFA (NFL) Championship.
+            Although the league did not maintain official standings for its 1920 inaugural season and teams played
+            schedules that included non-league opponents, the APFA awarded the Akron Pros the championship by virtue of
+            their 8–0–3 (8 wins, 0 losses, and 3 ties) record.[9] The following season resulted in the Chicago Staleys
+            controversially winning the title over the Buffalo All-Americans.[10] In 1922, the APFA changed its name to
+            the National Football League (NFL).[11]
+
+            In 1932, the season ended with the Chicago Bears (6-1-6) and the Portsmouth Spartans (6-1-4) tied for first
+            in the league standings.[12] At the time, teams were ranked on a single table and the team with the highest
+            winning percentage (not including ties, which were not counted towards the standings) at the end of the
+            season was declared the champion; the only tiebreaker was that in the event of a tie, if two teams played
+            twice in a season, the result of the second game determined the title (the source of the 1921 controversy).
+        </div>
+
+    </div>
+</div>
+
+
+<script src="node_modules/angular/angular.js" type="text/javascript"></script>
+<script src="app.js" type="text/javascript"></script>
+</body>
+</html>
